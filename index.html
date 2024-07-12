@@ -6,7 +6,6 @@
     <title>Cole Augusta</title>
     <style>
         .topnav
-        /* css styling for topnav div and list items */
         {
             position: absolute;
             left: 0px;
@@ -14,49 +13,35 @@
             height: 100%;
             display: flex;
             align-items: center;
-            list-style: none;
-            padding: 0 100px;
         }
-        .topnav li
-        {
-            display: block;
-            height: 100%;
-            margin-right: 30px;
-            font-size: 20px;
-            position: relative;
-            display: flex;
-            align-items: center;
-        }
-
-        /* topnav animations */
-        .topnav li:before, .topnav li:after
+        .topnav a:before
         {
             position: absolute;
-            width: 0%;
-            display: block;
-            height: 1px;
-            transition: all 0.3s ease;
-            margin-top: 2px;
+            top: 0px;
+            left: 0px;
+            width: 2px;
+            height: 0px;
+            opacity: 1;
+            transition: all 0.3s;
         }
-        .topnav li:before
+        .topnav a:after
         {
-            bottom: 25%;
-        }
-        .topnav li:after
-        {
-            top: 25%;
-        }
-        .topnav li:hover:before
-        {
+            position: absolute;
+            top: 0px;
+            left: 0px;
             width: 100%;
-            height: 1px;
-            bottom: 25%;
+            height: 2px;
+            opacity: 1;
+            transition: all 0.3s;
         }
-        .topnav li:hover:after
+        .topnav a:hover:before
         {
-            width: 100%;
-            height: 1px;
-            bottom: 25%;
+            height: 100%;
+        }
+        .topnav a:hover:after
+        {
+            opacity: 0;
+            top: 100%;
         }
     </style>
 </head>
