@@ -5,11 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cole Augusta</title>
     <style>
-        div.topnav a:before, div.topnav a:after
+        .topnav
+        /* css styling for topnav div and list items */
         {
             position: absolute;
             left: 0px;
             width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            list-style: none;
+            padding: 0 100px;
+        }
+        .topnav li
+        {
+            display: block;
+            height: 100%;
+            margin-right: 30px;
+            font-size: 20px;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        /* topnav animations */
+        .topnav li:before, .topnav li:after
+        {
+            position: absolute;
+            width: 0%;
+            display: block;
+            height: 1px;
+            transition: all 0.3s ease;
+            margin-top: 2px;
+        }
+        .topnav li:before
+        {
+            bottom: 25%;
+        }
+        .topnav li:after
+        {
+            top: 25%;
+        }
+        .topnav li:hover:before
+        {
+            width: 100%;
+            height: 1px;
+            bottom: 25%;
+        }
+        .topnav li:hover:after
+        {
+            width: 100%;
+            height: 1px;
+            bottom: 25%;
         }
     </style>
 </head>
