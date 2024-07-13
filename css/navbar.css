@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-family: "Roboto Condensed", sans-serif;
 }
-.navbar {
+nav {
     background-color: #333;
     height: 70px;
     width: 100%;
@@ -13,27 +13,28 @@
     align-items: center;
     gap: 8px 30px;
 }
-.navbar a {
+nav a {
     color: #a0a0a0;
     text-decoration: none;
     padding: 0 20px;
     letter-spacing: 0.5px;
     position: relative;
     transition: 0.2s;
+    align-items: center;
 }
-.navbar a:after {
+nav a:after {
     content: "";
     position: absolute;
     left: 0;
     bottom: -5px;
     width: 0%;
     height: 2px;
-    background-color: yellowgreen;
+    background-color: white;
     transition: 0.5s linear;
 }
-.navbar a:hover {
+nav a:hover {
     color: #fff;
 }
-.navbar a:hover:after {
+nav a:hover:after {
     width: 100%;
 }
