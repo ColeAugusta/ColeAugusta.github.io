@@ -5,46 +5,58 @@
     font-family: "Trebuchet MS", sans-serif;
 }
 body, html {
-    width: 100%;
+    width: 80%;
     padding: 0;
-    margin: 0;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: dimgray;
 }
 nav {
-    background-color: #333;
-    height: 70px;
+    background-color: dimgray;
+    height: 60px;
     width: 100%;
-    display: flex;
     text-align: center;
-    justify-content: center;
-    align-items: center;
-    gap: 8px 30px;
+    overflow: hidden;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: right;
 }
 nav ul li {
     display: inline;
+    margin-top: 5px;
 }
-nav ul a {
-    color: #a0a0a0;
+nav ul li a {
+    color: white;
     text-decoration: none;
-    padding: 0 20px;
+    padding: 14px 20px;
     letter-spacing: 0.5px;
     position: relative;
     transition: 0.2s;
     align-items: center;
     display: inline-block;
+    font-size: 20px;
 }
-nav ul a:after {
+nav ul li a:after {
     content: "";
     position: absolute;
     left: 0;
     bottom: -5px;
     width: 0%;
     height: 2px;
-    background-color: white;
+    background-color: firebrick;
     transition: 0.5s linear;
 }
-nav ul a:hover {
-    color: #fff;
+nav ul li a:hover {
+    color: firebrick;
 }
 nav ul a:hover:after {
     width: 100%;
+}
+
+h1, p {
+    margin: 0 0 20px 0;
 }
