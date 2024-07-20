@@ -79,13 +79,25 @@ h2 {
 #about h1 {
     font-size: 30px;
 }
+#contact h1 {
+    font-size: 30px;
+}
 
 #projects ul {
     border: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 #projects ul li {
     color: white;
     letter-spacing: 0.5px;
+    width: 20%;
+    float: left;
 }
 
+#contact p {
+    color: white;
+    width: 100%;
+}
