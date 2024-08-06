@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     letter-spacing: 0.5px;
 }
 body, html {
@@ -151,6 +151,12 @@ h2 {
     margin-bottom: 80px;
     margin-top: 40px;
     text-align: center;
+}
+
+label {
+    width: 100%;
+    display: inline-block;
+    margin: 20px;
 }
 
 @keyframes fade-in {
