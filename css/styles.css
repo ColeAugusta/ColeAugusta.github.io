@@ -101,6 +101,12 @@ h2 {
     animation: none;
 }
 
+#skills h1 {
+    font-size: 30px;
+    text-align: center;
+    animation: none;
+}
+
 #projects h2 {
     margin-bottom: 1px;
     font-size: 25px;
@@ -151,6 +157,26 @@ h2 {
     margin-bottom: 40px;
     margin-top: 40px;
     text-align: center;
+}
+
+#about {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#projects {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#contact {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#skills {
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 label {
