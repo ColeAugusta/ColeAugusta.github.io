@@ -1,0 +1,1 @@
+SyncPlayer is a unified media player that combines Spotify, YouTube, iTunes, and more into one seamless application. It lets users search, play, and manage content across platforms from a single interface. SyncPlayer simplifies media playback by syncing libraries and playlists in one place for a streamlined listening and viewing experience.
