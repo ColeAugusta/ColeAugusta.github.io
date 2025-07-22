@@ -16,7 +16,7 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="Resume.pdf">Resume</a></li>
+            <li><a href="txt/Resume.pdf">Resume</a></li>
             <li><a href="https://github.com/ColeAugusta"><img src="img/icons8-github-75.png"></a></li>
             <li><a href="https://www.linkedin.com/in/coleaugusta"><img src="img/icons8-linkedin-75.png"></a></li>
         </ul>
@@ -35,26 +35,58 @@
             </div>
         </div>
 
-        <h1 style="color: black;animation: fade-in 1.5s cubic-bezier(0.77, 0, 0.175, 1); font-size: 30px;">Projects</h1>
+        <h1 class="section-header">Projects</h1>
         
         <div id="projects">
             <div class="project">
                 <h2>Flip</h2>
-                <div class="project-img">
+                <div class="project-image">
                     <img src="img/flip.png">
+                    <img src="img/flipc1.png">
                 </div>
                 <p id="p1-text">Loading...</p>
                 <div class="project-skills">
-                    <img src="img/icons8-python-96.png"><img src="img/icons8-c++-96.png"><img src="img/icons8-c-programming-96.png"><img src="img/icons8-java-logo-96.png">
-                <a href="https://github.com/ColeAugusta">
-                    <img src="img/icons8-github-96.png">
-                </a>
+                    <img src="img/icons8-python-96.png"><img src="img/icons8-c++-96.png">
+                    <img src="img/icons8-c-programming-96.png"><img src="img/icons8-java-logo-96.png">
+                    <a href="https://github.com/ColeAugusta"><img src="img/icons8-github-96.png"></a>
                 </div>
-
             </div>
-
-
-
+            <div class="project">
+                <h2>SwiftHire</h2>
+                <div class="project-image">
+                    <img src="img/swift1.png">
+                </div>
+                <p id="p2-text">Loading...</p>
+                <div class="project-skills">
+                    <img src="img/icons8-python-96.png"><img src="img/icons8-c++-96.png">
+                    <img src="img/icons8-c-programming-96.png"><img src="img/icons8-java-logo-96.png">
+                    <a href="https://github.com/ColeAugusta"><img src="img/icons8-github-96.png"></a>
+                </div>
+            </div>
+            <div class="project">
+                <h2>AI & Youtube</h2>
+                <div class="project-image">
+                    <img src="img/ytc1.png">
+                </div>
+                <p id="p3-text">Loading...</p>
+                <div class="project-skills">
+                    <img src="img/icons8-python-96.png"><img src="img/icons8-c++-96.png">
+                    <img src="img/icons8-c-programming-96.png"><img src="img/icons8-java-logo-96.png">
+                    <a href="https://github.com/ColeAugusta"><img src="img/icons8-github-96.png"></a>
+                </div>
+            </div>
+            <div class="project">
+                <h2>SyncPlayer</h2>
+                <div class="project-image">
+                    <img src="img/sync1.png">
+                </div>
+                <p id="p4-text">Loading...</p>
+                <div class="project-skills">
+                    <img src="img/icons8-python-96.png"><img src="img/icons8-c++-96.png">
+                    <img src="img/icons8-c-programming-96.png"><img src="img/icons8-java-logo-96.png">
+                    <a href="https://github.com/ColeAugusta"><img src="img/icons8-github-96.png"></a>
+                </div>
+            </div>
         </div>
 
         <div id="skills">
@@ -68,8 +100,9 @@
                 <img src="img/icons8-css-logo-96.png">
             </div>
         </div>
+
         <div id ="contact">
-            <h1 style="color: black;animation: fade-in 1.5s cubic-bezier(0.77, 0, 0.175, 1); font-size: 30px;">Contact</h1>
+            <h1 class="section-header">Contact</h1>
             <p>Please contact me directly at colepaugusta@gmail.com, or via this form:</p>
             <form action="https://formspree.io/f/xkgwbnjn" method="POST">
                 <label><input type="email" name="email" placeholder="Your email"></label>
@@ -77,12 +110,15 @@
                 <label><button type="submit">Send</button></label>
             </form>
         </div>
+
     </div>
 
     <script>
         const fileMap = {
-            "about.txt": "about-text",
-            "flip.txt": "p1-text"
+            "txt/about.txt": "about-text",
+            "txt/flip.txt": "p1-text",
+            "txt/swift.txt": "p2-text",
+            "txt/yt.txt": "p3-text",
         };
         Promise.all(
             Object.keys(fileMap).map(filename =>
