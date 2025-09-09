@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cole Augusta</title>
+    <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/projects.css">
     <link rel="icon" type="image/x-icon" href="img/face.jpg">
 </head>
 
@@ -23,9 +25,10 @@
     </nav>
  
     <div id="page">
-        <h1 style="margin-top: 80px;">Hi, welcome to my portfolio!</h1>
-        <h2><i>Cole Augusta</i></h2>
-        <h2 style="margin-bottom:80px;"><i>RPI Computer Science</i></h2>
+        <h1 style="margin-top: 80px;"><i>Cole Augusta</i></h1>
+        <h2><i>Computer Science/Artificial Intelligence Concentration</i></h2>
+        <h2 style="margin-bottom:80px;"><i>Rensselaer Polytechnic Institute</i></h2>
+
 
         <div id="about">
             <h1 class="section-header">About</h1>
@@ -40,9 +43,15 @@
         <div id="projects">
             <div class="project">
                 <h2>Flip</h2>
-                <div class="project-image">
-                    <img src="img/flip.png">
-                    <img src="img/flipc1.png">
+                <div class="slideshow-container" slideshow="0">
+                    <div class="slide active">
+                        <img src="img/flip.png">
+                    </div>
+                    <div class="slide">
+                        <img src="img/flipc1.png">
+                    </div>
+                    <button class="slide-button prev" onclick="changeSlide(0, -1)">❮</button>
+                    <button class="slide-button next" onclick="changeSlide(0, 1)">❯</button>
                 </div>
                 <p id="p1-text">Loading...</p>
                 <div class="project-skills">
@@ -53,8 +62,13 @@
             </div>
             <div class="project">
                 <h2>Hype Classifier</h2>
-                <div class="project-image">
-
+                <div class="slideshow-container" slideshow="1">
+                    <div class="slide active">
+                    </div>
+                    <div class="slide">
+                    </div>
+                    <button class="slide-button prev" onclick="changeSlide(1, -1)">❮</button>
+                    <button class="slide-button next" onclick="changeSlide(1, 1)">❯</button>
                 </div>
                 <p id="p2-text">Loading...</p>
                 <div class="project-skills">
@@ -63,8 +77,13 @@
             </div>
             <div class="project">
                 <h2>View Count Predictor</h2>
-                <div class="project-image">
-                    <img src="img/ytc1.png">
+                <div class="slideshow-container" slideshow="2">
+                    <div class="slide active">
+                    </div>
+                    <div class="slide">
+                    </div>
+                    <button class="slide-button prev" onclick="changeSlide(1, -1)">❮</button>
+                    <button class="slide-button next" onclick="changeSlide(1, 1)">❯</button>
                 </div>
                 <p id="p3-text">Loading...</p>
                 <div class="project-skills">
@@ -91,9 +110,12 @@
             <h1 class="section-header">Skills</h1>
             <div class="skills-grid">
                 <img src="img/icons8-python-96.png">
+                <img src="img/icons8-pytorch-96.png">
+                <img src="img/icons8-tensorflow-96.png">
                 <img src="img/icons8-c++-96.png">
                 <img src="img/icons8-c-programming-96.png">
                 <img src="img/icons8-java-logo-96.png">
+                <img src="img/icons8-javascript-96.png">
                 <img src="img/icons8-html-5-96.png">
                 <img src="img/icons8-css-logo-96.png">
             </div>
@@ -119,6 +141,7 @@
             "txt/yt.txt": "p3-text",
             "txt/swift.txt": "p4-text"
         };
+        // maps text files to project HTML
         Promise.all(
             Object.keys(fileMap).map(filename =>
                 fetch(filename)
@@ -136,6 +159,31 @@
                 )
             )
         )
+
+        // keep track of current slide for each slideshow
+        let currentSlides = [0, 0, 0, 0];
+        
+        function showSlide(showIndex, slideIndex) {
+            const container = document.querySelector(`[slideshow="${showIndex}"]`);
+            const slides = container.querySelectorAll('.slide');
+            
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[slideIndex].classList.add('active');
+        }
+
+        function changeSlide(showIndex, direction) {
+            const container = document.querySelector(`[slideshow="${showIndex}"]`);
+            const slides = container.querySelectorAll('.slide');
+            
+            currentSlides[showIndex] += direction;
+            if (currentSlides[showIndex] >= slides.length) {
+                currentSlides[showIndex] = 0;
+            } else if (currentSlides[showIndex] < 0) {
+                currentSlides[showIndex] = slides.length - 1;
+            }
+
+            showSlide(showIndex, currentSlides[showIndex]);
+        }
     </script>
 </body>
 </html>
