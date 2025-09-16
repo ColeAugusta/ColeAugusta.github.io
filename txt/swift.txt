@@ -1,1 +1,0 @@
-SwiftHire is a personal web tool to help both employers and candidates find each other in one location. SwiftHire simplifies the application process by centralizing information and using our AI-powered resume reviewer.
